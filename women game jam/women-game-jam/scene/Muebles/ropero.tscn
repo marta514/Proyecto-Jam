@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8fniaqyoxmag"]
+
+[ext_resource type="Texture2D" uid="uid://cdnyfhygwvdd5" path="res://asset/sprites/jam_2026.png" id="1_58g8b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6h52x"]
+size = Vector2(47.9375, 65)
+
+[node name="Ropero" type="StaticBody2D"]
+
+[node name="Jam2026" type="Sprite2D" parent="."]
+position = Vector2(89, 34)
+texture = ExtResource("1_58g8b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(77.9688, 33.5)
+shape = SubResource("RectangleShape2D_6h52x")

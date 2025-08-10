@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://tryb0m0coawd"]
+
+[ext_resource type="Script" uid="uid://carmrkfq3fve7" path="res://obj_recolectar.gd" id="1_2a8bo"]
+[ext_resource type="Texture2D" uid="uid://cr276wss2kejq" path="res://scene/Objetos/Objeto Correcto/molcajete.png" id="2_2a8bo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xoxc"]
+size = Vector2(15, 17)
+
+[node name="objRec" type="Area2D"]
+script = ExtResource("1_2a8bo")
+
+[node name="Molcajete" type="Sprite2D" parent="."]
+position = Vector2(64, 36)
+texture = ExtResource("2_2a8bo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(63.5, 36.5)
+shape = SubResource("RectangleShape2D_6xoxc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

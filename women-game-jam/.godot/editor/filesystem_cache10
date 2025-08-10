@@ -1,12 +1,13 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1754810061
+::res://::1754816594
 button.gd::GDScript/GDScript::4526751131991731872::1754803124::0::1::::<>Button<><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::5454003224033605850::1754803124::1754805035::1::::<><><>0<>0<>698ba69ef1ab62903ceae80e42c1369d<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 objeto_oculto.gd::GDScript::5211466018615686188::1754810061::0::1::::ObjetoRO<>Area2D<><>0<>0<><>::
-::res://asset/::1754805035
+obj_recolectar.gd::GDScript::4808695285336927780::1754810603::0::1::::ObjetoR<>Area2D<><>0<>0<><>::
+::res://asset/::1754815434
 finalcasaaaa.png::CompressedTexture2D/CompressedTexture2D::212498475945441016::1754803124::1754805035::1::::<><><>0<>0<>5e057138d4db8be200f998562f66cbaa<>res://.godot/imported/finalcasaaaa.png-27d13919e40089acd7cf31d69d4ff0ce.ctex::
 tilemaps-cuartos.png::CompressedTexture2D/CompressedTexture2D::6373194345311567759::1754803124::1754805035::1::::<><><>0<>0<>1c04613c04948f67d28bf61d23a7281f<>res://.godot/imported/tilemaps-cuartos.png-35e8fa888aa1db56bc7fcffb1862898b.ctex::
-::res://asset/sprites/::1754809922
+::res://asset/sprites/::1754815434
 .1.png::CompressedTexture2D/CompressedTexture2D::9085878814885626352::1754809385::1754809386::1::::<><><>0<>0<>ea21e5fcc26767f5fa5870ae41e56b2f<>res://.godot/imported/.1.png-4c2e0d20b39fcdd44ec363fa84c38837.ctex::
 1.png::CompressedTexture2D/CompressedTexture2D::3427939919209378419::1754807167::1754807167::1::::<><><>0<>0<>8fc6d46b7766f4e105bfb056baf8f671<>res://.godot/imported/1.png-4e979b876d04bbae4f60d32ef887fa88.ctex::
 2.png::CompressedTexture2D/CompressedTexture2D::7676577785112180232::1754807183::1754807183::1::::<><><>0<>0<>bd130d05baffe771f8c352c37e98b90e<>res://.godot/imported/2.png-14e74b8c1274947d66021f08d08b867b.ctex::
@@ -20,36 +21,40 @@ jam_2026.png::CompressedTexture2D/CompressedTexture2D::5011711350940593880::1754
 jam_2028.png::CompressedTexture2D/CompressedTexture2D::9170636461662787957::1754807209::1754807210::1::::<><><>0<>0<>7688a200e7d27a0e6b3c0bf24fe24044<>res://.godot/imported/jam_2028.png-27dea977d2f5a9bb84d3f822cc102f50.ctex::
 protaa.png::CompressedTexture2D/CompressedTexture2D::7012686241857274235::1754807227::1754807228::1::::<><><>0<>0<>67a36fa4e87f2f9c1691ca20b77e470d<>res://.godot/imported/protaa.png-6df0c07e4cf4eaafc1043a5955a46f7b.ctex::
 Untitled 07-31-2025 01-24-46.png::CompressedTexture2D/CompressedTexture2D::8539604916440621087::1754803124::1754805035::1::::<><><>0<>0<>defa7d8a514f3899d686bbf956999395<>res://.godot/imported/Untitled 07-31-2025 01-24-46.png-7adf259e11e8d9baab69dde6e3739296.ctex::
-::res://scene/::1754809697
+::res://scene/::1754815434
 ajustes.tscn::PackedScene/PackedScene::6359254341867082153::1754803124::0::1::::<><><>0<>0<><>::uid://b5q16u274h8ka::::res://button.gd
+camera_2d.gd::GDScript::7181141958040915857::1754810711::0::1::::<>Camera2D<><>0<>0<><>::
 control.tscn::PackedScene/PackedScene::8670984455836100485::1754803124::0::1::::<><><>0<>0<><>::uid://b5q16u274h8ka::::res://button.gd
 menú.gd::GDScript/GDScript::2736111226602135714::1754803124::0::1::::<>Control<><>0<>0<><>::
-menú.tscn::PackedScene/PackedScene::4342405673092115261::1754808717::0::1::::<><><>0<>0<><>::uid://be8nl8c7o50wc::::res://scene/menú.gd
-nivel.gd::GDScript/GDScript::7000129211159760510::1754807677::0::1::::<>Node2D<><>0<>0<><>::
-nivel.tscn::PackedScene/PackedScene::6567525216210186220::1754808717::0::1::::<><><>0<>0<><>::uid://cw2htyf1wir2v::::res://asset/tilemaps-cuartos.png<>uid://b5q16u274h8ka::::res://button.gd
-nivel_art_original.tscn::PackedScene/PackedScene::1793163916058289821::1754808717::0::1::::<><><>0<>0<><>::uid://da623uf7ieai::::res://asset/finalcasaaaa.png<>uid://c6y6dt2x54ym5::::res://scene/nivel.gd<>uid://b5q16u274h8ka::::res://button.gd<>uid://df4o25j38yrfl::::res://scene/Muebles/cama.tscn<>uid://b8p2gqpxhr2b5::::res://scene/Muebles/estante2.tscn<>uid://d0ga7kuueyu44::::res://scene/player.tscn
-player.gd::GDScript/GDScript::1715617237961775407::1754807677::0::1::::Personaje<>CharacterBody2D<><>0<>0<><>::
-player.tscn::PackedScene::8926427111004039111::1754810169::0::1::::<><><>0<>0<><>::uid://ypb723mhu5t8::::res://scene/player.gd<>uid://dtwwbsnljbd4b::::res://asset/sprites/Untitled 07-31-2025 01-24-46.png
-::res://scene/Muebles/::1754809626
-cama.tscn::PackedScene/PackedScene::7570973069392359433::1754808958::0::1::::<><><>0<>0<><>::uid://dhmud5ou8ia3a::::res://asset/sprites/2.png
-estante2.tscn::PackedScene/PackedScene::4735269128227927364::1754808046::0::1::::<><><>0<>0<><>::uid://d3wlbplmt52mr::::res://asset/sprites/jam_2028.png
-estante3.tscn::PackedScene/PackedScene::3933662567083313070::1754809521::0::1::::<><><>0<>0<><>::uid://fuv4kmlswgfm::::res://asset/sprites/3.png
-estante4.tscn::PackedScene/PackedScene::150415973849710186::1754809472::0::1::::<><><>0<>0<><>::uid://d2pjdjxpwjbxw::::res://asset/sprites/.1.png
-estante.tscn::PackedScene/PackedScene::1497790789639937371::1754809586::0::1::::<><><>0<>0<><>::uid://bo3rw1dtq1qyt::::res://asset/sprites/1.png
-mesa.tscn::PackedScene/PackedScene::4457651696261501739::1754808106::0::1::::<><><>0<>0<><>::uid://dlcwqb0lfpoqi::::res://asset/sprites/jammm1.png
-planta2.tscn::PackedScene/PackedScene::1515588931191901184::1754809106::0::1::::<><><>0<>0<><>::uid://byv5m5nxk5dyt::::res://asset/sprites/4.png
-planta.tscn::PackedScene/PackedScene::7436449800129062229::1754809626::0::1::::<><><>0<>0<><>::uid://baku7ihnaxrx7::::res://asset/sprites/5.png
-objeto_oculto.tscn::PackedScene::2945272919452903776::1754810174::0::1::::<><><>0<>0<><>::uid://cgiqc4ap3qfwm::::res://objeto_oculto.gd<>uid://xjw7j1528ot4::::res://scene/Objetos/Libros/agua-chocolate.png
-ropero.tscn::PackedScene/PackedScene::4713778045602619214::1754808557::0::1::::<><><>0<>0<><>::uid://cdnyfhygwvdd5::::res://asset/sprites/jam_2026.png
-tele.tscn::PackedScene/PackedScene::2492157239179098668::1754808388::0::1::::<><><>0<>0<><>::uid://wyfpnhptka5u::::res://asset/sprites/jammm2.png
-::res://scene/Objetos/::1754809787
-::res://scene/Objetos/Libros/::1754809864
+menú.tscn::PackedScene::4342405673092115261::1754813538::0::1::::<><><>0<>0<><>::uid://be8nl8c7o50wc::::res://scene/menú.gd
+nivel.gd::GDScript::7000129211159760510::1754807677::0::1::::<>Node2D<><>0<>0<><>::
+nivel.tscn::PackedScene::6567525216210186220::1754813539::0::1::::<><><>0<>0<><>::uid://cw2htyf1wir2v::::res://asset/tilemaps-cuartos.png<>uid://b5q16u274h8ka::::res://button.gd
+nivel_art_original.tscn::PackedScene::1793163916058289821::1754814103::0::1::::<><><>0<>0<><>::uid://da623uf7ieai::::res://asset/finalcasaaaa.png<>uid://c6y6dt2x54ym5::::res://scene/nivel.gd<>uid://b5q16u274h8ka::::res://button.gd<>uid://df4o25j38yrfl::::res://scene/Muebles/cama.tscn<>uid://b8p2gqpxhr2b5::::res://scene/Muebles/estante2.tscn<>uid://d0ga7kuueyu44::::res://scene/player.tscn<>uid://vufr7w8overg::::res://scene/Muebles/planta2.tscn<>uid://vlsnpf1alkr0::::res://scene/Muebles/estante.tscn<>uid://bbrhp3i0rejbw::::res://scene/Muebles/tele.tscn<>uid://6nnae8tifd7k::::res://scene/Objetos/Libros/objeto_oculto2.tscn<>uid://bh7yhkfsdolto::::res://scene/Objetos/Libros/objeto_oculto.tscn<>uid://dakumg4cgm7nx::::res://scene/camera_2d.gd<>uid://hdcg6crdcaxh::::res://scene/Objetos/Objeto Correcto/obj_rec.tscn<>uid://tryb0m0coawd::::res://scene/Objetos/Objeto Correcto/obj_rec2.tscn
+player.gd::GDScript::1715617237961775407::1754811268::0::1::::Personaje<>CharacterBody2D<><>0<>0<><>::
+player.tscn::PackedScene::8926427111004039111::1754813539::0::1::::<><><>0<>0<><>::uid://ypb723mhu5t8::::res://scene/player.gd<>uid://dtwwbsnljbd4b::::res://asset/sprites/Untitled 07-31-2025 01-24-46.png
+::res://scene/Muebles/::1754815434
+cama.tscn::PackedScene::7570973069392359433::1754813540::0::1::::<><><>0<>0<><>::uid://dhmud5ou8ia3a::::res://asset/sprites/2.png
+estante2.tscn::PackedScene::4735269128227927364::1754813540::0::1::::<><><>0<>0<><>::uid://d3wlbplmt52mr::::res://asset/sprites/jam_2028.png
+estante3.tscn::PackedScene::3933662567083313070::1754809521::0::1::::<><><>0<>0<><>::uid://fuv4kmlswgfm::::res://asset/sprites/3.png
+estante4.tscn::PackedScene::150415973849710186::1754809472::0::1::::<><><>0<>0<><>::uid://d2pjdjxpwjbxw::::res://asset/sprites/.1.png
+estante.tscn::PackedScene::1497790789639937371::1754809586::0::1::::<><><>0<>0<><>::uid://bo3rw1dtq1qyt::::res://asset/sprites/1.png
+mesa.tscn::PackedScene::4457651696261501739::1754808106::0::1::::<><><>0<>0<><>::uid://dlcwqb0lfpoqi::::res://asset/sprites/jammm1.png
+planta2.tscn::PackedScene::1515588931191901184::1754809106::0::1::::<><><>0<>0<><>::uid://byv5m5nxk5dyt::::res://asset/sprites/4.png
+planta.tscn::PackedScene::7436449800129062229::1754809626::0::1::::<><><>0<>0<><>::uid://baku7ihnaxrx7::::res://asset/sprites/5.png
+ropero.tscn::PackedScene::4713778045602619214::1754808557::0::1::::<><><>0<>0<><>::uid://cdnyfhygwvdd5::::res://asset/sprites/jam_2026.png
+tele.tscn::PackedScene::2492157239179098668::1754808388::0::1::::<><><>0<>0<><>::uid://wyfpnhptka5u::::res://asset/sprites/jammm2.png
+::res://scene/Objetos/::1754815207
+::res://scene/Objetos/Libros/::1754815434
 agua-chocolate.png::CompressedTexture2D/CompressedTexture2D::1634316236982625491::1754807183::1754809864::1::::<><><>0<>0<>76351ee1d8c80951d1bcf8a7b4ea1864<>res://.godot/imported/agua-chocolate.png-ffe36357da1f4726eea117d36f1663f9.ctex::
 libro.png::CompressedTexture2D/CompressedTexture2D::2054033530371995394::1754807209::1754809864::1::::<><><>0<>0<>12f494cf4ca9b0fc3e9c70e979bfc515<>res://.godot/imported/libro.png-dc18926d9e6c181437efc8b0c6ca250a.ctex::
 libro_naranja.png::CompressedTexture2D/CompressedTexture2D::3448496155818878870::1754807215::1754809864::1::::<><><>0<>0<>e4ef9132a775c0256f3ca2ea88713f64<>res://.godot/imported/libro_naranja.png-fd5c2d1726da124ae13d639a47dd8818.ctex::
+objeto_oculto2.tscn::PackedScene::2203480646433856158::1754810349::0::1::::<><><>0<>0<><>::uid://cgiqc4ap3qfwm::::res://objeto_oculto.gd<>uid://4i8vq06a2isg::::res://scene/Objetos/Libros/libro.png
+objeto_oculto.tscn::PackedScene::2945272919452903776::1754810353::0::1::::<><><>0<>0<><>::uid://cgiqc4ap3qfwm::::res://objeto_oculto.gd<>uid://xjw7j1528ot4::::res://scene/Objetos/Libros/agua-chocolate.png
 Untitled_08-09-2025_09-21-07.png::CompressedTexture2D/CompressedTexture2D::5725253009697285896::1754807227::1754809864::1::::<><><>0<>0<>2463a8718e6426f82afa7029ee008390<>res://.godot/imported/Untitled_08-09-2025_09-21-07.png-2d11f1d05053a8e95acceca4577e42eb.ctex::
-::res://scene/Objetos/Objeto Correcto/::1754809817
+::res://scene/Objetos/Objeto Correcto/::1754815434
 foto.png::CompressedTexture2D/CompressedTexture2D::5315529617623709980::1754809385::1754809817::1::::<><><>0<>0<>a6e59e545080b95b834f3996f480d8cf<>res://.godot/imported/foto.png-fbec805d8f14fe96cb91b3a5457fb1b9.ctex::
 molcajete.png::CompressedTexture2D/CompressedTexture2D::6023789396146444562::1754807219::1754809817::1::::<><><>0<>0<>751d8b1666f72fc48a9d4e935a3111d3<>res://.godot/imported/molcajete.png-062f89475a173163fa5f56e0e5478ae5.ctex::
-::res://scene/Objetos/Objeto Incorrecto/::1754809922
-Untitled_08-09-2025_10-24-21.png::CompressedTexture2D::1893927423875846618::1754807239::1754809922::1::::<><><>0<>0<>a951bae30a812b8ea31e1dccef14a01f<>res://.godot/imported/Untitled_08-09-2025_10-24-21.png-bb2cfeed965a65f1a2f47de1c7358e54.ctex::
+obj_rec2.tscn::PackedScene::1370142777322447391::1754813540::0::1::::<><><>0<>0<><>::uid://carmrkfq3fve7::::res://obj_recolectar.gd<>uid://cr276wss2kejq::::res://scene/Objetos/Objeto Correcto/molcajete.png
+obj_rec.tscn::PackedScene::497648819567322229::1754813539::0::1::::<><><>0<>0<><>::uid://carmrkfq3fve7::::res://obj_recolectar.gd<>uid://chy484unpuuim::::res://scene/Objetos/Objeto Correcto/foto.png
+::res://scene/Objetos/Objeto Incorrecto/::1754815434
+Untitled_08-09-2025_10-24-21.png::CompressedTexture2D/CompressedTexture2D::1893927423875846618::1754807239::1754809922::1::::<><><>0<>0<>a951bae30a812b8ea31e1dccef14a01f<>res://.godot/imported/Untitled_08-09-2025_10-24-21.png-bb2cfeed965a65f1a2f47de1c7358e54.ctex::

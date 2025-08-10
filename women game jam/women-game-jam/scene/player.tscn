@@ -178,11 +178,11 @@ height = 10.0
 [node name="player" type="CharacterBody2D"]
 position = Vector2(1, 0)
 script = ExtResource("1_hjaqi")
-metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kk4ol")
-animation = &"idle"
+animation = &"izquierda"
+frame_progress = 0.119489
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 7)

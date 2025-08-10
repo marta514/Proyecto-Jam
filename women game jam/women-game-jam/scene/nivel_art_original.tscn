@@ -1,8 +1,24 @@
-[gd_scene load_steps=8 format=4 uid="uid://0svfa0yewlu0"]
+[gd_scene load_steps=24 format=4 uid="uid://0svfa0yewlu0"]
 
 [ext_resource type="Texture2D" uid="uid://da623uf7ieai" path="res://asset/finalcasaaaa.png" id="1_7dh1l"]
+[ext_resource type="Script" uid="uid://dgoilas3thdc8" path="res://scene/nivel.gd" id="1_umuvk"]
 [ext_resource type="Script" uid="uid://b5q16u274h8ka" path="res://button.gd" id="2_f5ly6"]
 [ext_resource type="PackedScene" uid="uid://d0ga7kuueyu44" path="res://scene/player.tscn" id="3_7tnk0"]
+[ext_resource type="Script" uid="uid://cfd5chxp8csxw" path="res://scene/camera_2d.gd" id="4_5euk4"]
+[ext_resource type="PackedScene" uid="uid://bh7yhkfsdolto" path="res://scene/Objetos/Libros/objeto_oculto.tscn" id="6_0np42"]
+[ext_resource type="PackedScene" uid="uid://6nnae8tifd7k" path="res://scene/Objetos/Libros/objeto_oculto2.tscn" id="7_5ur74"]
+[ext_resource type="PackedScene" uid="uid://hdcg6crdcaxh" path="res://scene/Objetos/Objeto Correcto/obj_rec.tscn" id="8_wmjgc"]
+[ext_resource type="PackedScene" uid="uid://tryb0m0coawd" path="res://scene/Objetos/Objeto Correcto/obj_rec2.tscn" id="9_bjcu1"]
+[ext_resource type="PackedScene" uid="uid://df4o25j38yrfl" path="res://scene/Muebles/cama.tscn" id="10_8w4m3"]
+[ext_resource type="PackedScene" uid="uid://vlsnpf1alkr0" path="res://scene/Muebles/estante.tscn" id="11_gy6sn"]
+[ext_resource type="PackedScene" uid="uid://bwbq33askvhw5" path="res://scene/Muebles/estante3.tscn" id="12_um4c5"]
+[ext_resource type="PackedScene" uid="uid://b8p2gqpxhr2b5" path="res://scene/Muebles/estante2.tscn" id="13_bkuk1"]
+[ext_resource type="PackedScene" uid="uid://ce4lgpp5ldta" path="res://scene/Muebles/estante4.tscn" id="14_rmrcl"]
+[ext_resource type="PackedScene" uid="uid://b4rk4whvkr0jn" path="res://scene/Muebles/mesa.tscn" id="15_fqb6s"]
+[ext_resource type="PackedScene" uid="uid://vufr7w8overg" path="res://scene/Muebles/planta2.tscn" id="16_rrkrv"]
+[ext_resource type="PackedScene" uid="uid://dd7jiho6pjbyj" path="res://scene/Muebles/planta.tscn" id="17_i4ir6"]
+[ext_resource type="PackedScene" uid="uid://b8fniaqyoxmag" path="res://scene/Muebles/ropero.tscn" id="18_if6dh"]
+[ext_resource type="PackedScene" uid="uid://bbrhp3i0rejbw" path="res://scene/Muebles/tele.tscn" id="19_ebn7m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f5ly6"]
 texture = ExtResource("1_7dh1l")
@@ -72,6 +88,7 @@ physics_layer_0/collision_layer = 1
 sources/4 = SubResource("TileSetAtlasSource_5euk4")
 
 [node name="nivel art original" type="Node2D"]
+script = ExtResource("1_umuvk")
 
 [node name="tilemaps" type="Node2D" parent="."]
 position = Vector2(160, -16)
@@ -96,7 +113,140 @@ theme_override_font_sizes/font_size = 80
 text = "<"
 script = ExtResource("2_f5ly6")
 
-[node name="player" parent="." instance=ExtResource("3_7tnk0")]
+[node name="player" parent="." groups=["Personaje"] instance=ExtResource("3_7tnk0")]
 position = Vector2(232, 200)
+scale = Vector2(2, 2)
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("object_to_follow")]
+position = Vector2(423, 242)
+script = ExtResource("4_5euk4")
+object_to_follow = NodePath("../player")
+
+[node name="ObjetoOculto1" parent="." groups=["ObjetosRecolectables"] instance=ExtResource("6_0np42")]
+position = Vector2(1153, 616)
+dialogo_texto = "Bien hecho ! Encontraste las pistas del autora Mexicana"
+
+[node name="ObjetoOculto2" parent="." groups=["ObjetosRecolectables"] instance=ExtResource("7_5ur74")]
+position = Vector2(2048, 309)
+dialogo_texto = "Bien hecho ! Encontraste las pistas del autor Boliviano"
+
+[node name="ObjetoOculto3" parent="." groups=["ObjetosRecolectables"] instance=ExtResource("7_5ur74")]
+visible = false
+position = Vector2(110, 159)
+dialogo_texto = "Bien hecho ! Encontraste las pistas del autor Boliviano"
+
+[node name="objRec" parent="." groups=["ObjetosRecolectables"] instance=ExtResource("8_wmjgc")]
+position = Vector2(134, 309)
+dialogo_texto = "Parce! Esto parece memorable"
+
+[node name="Molcajete" parent="." groups=["ObjetosRecolectables"] instance=ExtResource("9_bjcu1")]
+position = Vector2(423, 647)
+
+[node name="Cama" parent="." instance=ExtResource("10_8w4m3")]
+position = Vector2(1636, 113)
+
+[node name="Estante" parent="." instance=ExtResource("11_gy6sn")]
+position = Vector2(1380, 103)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HSplitContainer" type="HSplitContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -9.99997
+offset_top = -108.0
+offset_right = 61.0
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.23158, 1.13866)
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/HSplitContainer"]
+layout_mode = 2
+
+[node name="BotonCerrar" type="Button" parent="CanvasLayer/Control/HSplitContainer"]
+layout_mode = 2
+text = "Cerrar"
+
+[node name="Estante2" parent="." instance=ExtResource("12_um4c5")]
+position = Vector2(22, 62)
+
+[node name="Estante3" parent="." instance=ExtResource("13_bkuk1")]
+position = Vector2(512, 483)
+
+[node name="Estante4" parent="." instance=ExtResource("12_um4c5")]
+position = Vector2(92, 62)
+
+[node name="Estante5" parent="." instance=ExtResource("12_um4c5")]
+position = Vector2(161, 61)
+
+[node name="Estante6" parent="." instance=ExtResource("14_rmrcl")]
+position = Vector2(237, 60)
+
+[node name="Estante7" parent="." instance=ExtResource("14_rmrcl")]
+position = Vector2(308, 60)
+
+[node name="Estante8" parent="." instance=ExtResource("11_gy6sn")]
+position = Vector2(1439, 102)
+
+[node name="Mesa" parent="." instance=ExtResource("15_fqb6s")]
+position = Vector2(416, 214)
+
+[node name="Planta" parent="." instance=ExtResource("16_rrkrv")]
+position = Vector2(686, 372)
+
+[node name="Planta2" parent="." instance=ExtResource("17_i4ir6")]
+position = Vector2(890, 407)
+
+[node name="Planta3" parent="." instance=ExtResource("16_rrkrv")]
+position = Vector2(187, 443)
+
+[node name="Planta4" parent="." instance=ExtResource("17_i4ir6")]
+position = Vector2(357, 475)
+
+[node name="Ropero" parent="." instance=ExtResource("18_if6dh")]
+position = Vector2(1676, 95)
+
+[node name="Ropero2" parent="." instance=ExtResource("18_if6dh")]
+position = Vector2(1725, 94)
+
+[node name="Ropero3" parent="." instance=ExtResource("18_if6dh")]
+position = Vector2(1774, 94)
+
+[node name="Tele" parent="." instance=ExtResource("19_ebn7m")]
+position = Vector2(1628, 306)
+
+[node name="Tele2" parent="." instance=ExtResource("19_ebn7m")]
+position = Vector2(759, 98)
+
+[node name="Cama2" parent="." instance=ExtResource("10_8w4m3")]
+position = Vector2(2002, 97)
+
+[node name="Planta5" parent="." instance=ExtResource("17_i4ir6")]
+position = Vector2(1594, 639)
+
+[node name="Planta6" parent="." instance=ExtResource("16_rrkrv")]
+position = Vector2(1799, 611)
+
+[node name="Ropero4" parent="." instance=ExtResource("18_if6dh")]
+position = Vector2(1825, 92)
 
 [connection signal="pressed" from="regresar" to="regresar" method="_on_pressed"]
+[connection signal="recolectado" from="ObjetoOculto1" to="ObjetoOculto1" method="_on_recolectado"]
+[connection signal="recolectado" from="objRec" to="." method="_on_obj_rec_recolectado"]
