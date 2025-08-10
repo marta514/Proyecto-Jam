@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://vlsnpf1alkr0"]
+
+[ext_resource type="Texture2D" uid="uid://bo3rw1dtq1qyt" path="res://asset/sprites/1.png" id="1_k0y6b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6h52x"]
+size = Vector2(29.5, 36)
+
+[node name="Estante" type="StaticBody2D"]
+position = Vector2(0, 1)
+
+[node name="1" type="Sprite2D" parent="."]
+position = Vector2(34, 33)
+scale = Vector2(2, 2)
+texture = ExtResource("1_k0y6b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(33.75, 31)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_6h52x")

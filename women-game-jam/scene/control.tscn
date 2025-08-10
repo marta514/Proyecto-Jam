@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvsj32ka6wouf"]
+
+[ext_resource type="Script" uid="uid://b5q16u274h8ka" path="res://button.gd" id="1_vrdfc"]
+
+[node name="creditos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.45098, 0.713726, 0.713726, 1)
+
+[node name="regresar" type="Button" parent="."]
+layout_mode = 1
+offset_left = 13.0
+offset_top = 8.0
+offset_right = 67.0
+offset_bottom = 126.0
+theme_override_font_sizes/font_size = 80
+text = "<"
+script = ExtResource("1_vrdfc")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -141.0
+offset_right = 144.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "DESARROLADORES.
+
+Concepto y narrativa:
+
+Diseño del Juego:
+
+Programación y Desarrollo Técnico :
+
+Arte y Diseño Técnico y Visual:
+
+Audio y Música:
+
+Producción y Gestión:
+"
+
+[connection signal="pressed" from="regresar" to="regresar" method="_on_pressed"]
