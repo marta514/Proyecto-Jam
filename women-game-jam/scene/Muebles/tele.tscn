@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbrhp3i0rejbw"]
+
+[ext_resource type="Texture2D" uid="uid://wyfpnhptka5u" path="res://asset/sprites/jammm2.png" id="1_31smp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6h52x"]
+size = Vector2(78, 79)
+
+[node name="Tele" type="StaticBody2D"]
+
+[node name="Jammm2" type="Sprite2D" parent="."]
+position = Vector2(47, 34)
+texture = ExtResource("1_31smp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(39, 25.5)
+shape = SubResource("RectangleShape2D_6h52x")

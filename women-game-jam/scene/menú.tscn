@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://b24q101lwtj3j"]
+
+[ext_resource type="Script" uid="uid://be8nl8c7o50wc" path="res://scene/menú.gd" id="1_ku6hy"]
+
+[node name="MENÚ" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ku6hy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.451903, 0.71345, 0.714902, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -62.0
+offset_right = 96.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="play" type="Button" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "JUGAR"
+
+[node name="ajustes" type="Button" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "AJUSTES"
+
+[node name="salir" type="Button" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "SALIR"
+
+[node name="creditos" type="Button" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "creditos"
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/ajustes" to="." method="_on_ajustes_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/creditos" to="." method="_on_creditos_pressed"]

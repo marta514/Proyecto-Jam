@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://hdcg6crdcaxh"]
+
+[ext_resource type="Script" uid="uid://carmrkfq3fve7" path="res://obj_recolectar.gd" id="1_x0fp5"]
+[ext_resource type="Texture2D" uid="uid://chy484unpuuim" path="res://scene/Objetos/Objeto Correcto/foto.png" id="2_f8c4n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xoxc"]
+size = Vector2(18, 23)
+
+[node name="objRec" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_x0fp5")
+
+[node name="Foto" type="Sprite2D" parent="."]
+position = Vector2(33, 38)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_f8c4n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(33, 37.5)
+shape = SubResource("RectangleShape2D_6xoxc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
