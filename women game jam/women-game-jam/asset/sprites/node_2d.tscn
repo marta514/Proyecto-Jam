@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://bg6013n3d8rjl"]
+
+[ext_resource type="Texture2D" uid="uid://dtwwbsnljbd4b" path="res://asset/sprites/Untitled 07-31-2025 01-24-46.png" id="1_rsrc6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dihiw"]
+atlas = ExtResource("1_rsrc6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_edivd"]
+atlas = ExtResource("1_rsrc6")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cct1n"]
+atlas = ExtResource("1_rsrc6")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqddx"]
+atlas = ExtResource("1_rsrc6")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yd6lu"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"abajo",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"arriba",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"derecha",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dihiw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_edivd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cct1n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqddx")
+}],
+"loop": true,
+"name": &"ildle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"izquierda",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="sprites-frames" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_yd6lu")
+animation = &"abajo"
