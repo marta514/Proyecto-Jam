@@ -1,7 +1,7 @@
 [gd_scene load_steps=24 format=4 uid="uid://0svfa0yewlu0"]
 
 [ext_resource type="Texture2D" uid="uid://da623uf7ieai" path="res://asset/finalcasaaaa.png" id="1_7dh1l"]
-[ext_resource type="Script" uid="uid://dgoilas3thdc8" path="res://scene/nivel.gd" id="1_umuvk"]
+[ext_resource type="Script" uid="uid://qhjrbk544gjv" path="res://scene/nivel_art_original.gd" id="1_um4c5"]
 [ext_resource type="Script" uid="uid://b5q16u274h8ka" path="res://button.gd" id="2_f5ly6"]
 [ext_resource type="PackedScene" uid="uid://d0ga7kuueyu44" path="res://scene/player.tscn" id="3_7tnk0"]
 [ext_resource type="Script" uid="uid://cfd5chxp8csxw" path="res://scene/camera_2d.gd" id="4_5euk4"]
@@ -87,8 +87,8 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/4 = SubResource("TileSetAtlasSource_5euk4")
 
-[node name="nivel art original" type="Node2D"]
-script = ExtResource("1_umuvk")
+[node name="nivel" type="Node2D"]
+script = ExtResource("1_um4c5")
 
 [node name="tilemaps" type="Node2D" parent="."]
 position = Vector2(160, -16)
@@ -104,23 +104,19 @@ tile_set = SubResource("TileSet_umuvk")
 
 [node name="objetos" type="TileMapLayer" parent="tilemaps"]
 
-[node name="regresar" type="Button" parent="."]
-offset_left = 13.0
-offset_top = 8.0
-offset_right = 67.0
-offset_bottom = 126.0
-theme_override_font_sizes/font_size = 80
-text = "<"
-script = ExtResource("2_f5ly6")
-
-[node name="player" parent="." groups=["Personaje"] instance=ExtResource("3_7tnk0")]
-position = Vector2(232, 200)
-scale = Vector2(2, 2)
-
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("object_to_follow")]
 position = Vector2(423, 242)
 script = ExtResource("4_5euk4")
 object_to_follow = NodePath("../player")
+
+[node name="regresar" type="Button" parent="Camera2D"]
+offset_left = -410.0
+offset_top = -234.0
+offset_right = -356.0
+offset_bottom = -116.0
+theme_override_font_sizes/font_size = 80
+text = "<"
+script = ExtResource("2_f5ly6")
 
 [node name="ObjetoOculto1" parent="." groups=["ObjetosRecolectables"] instance=ExtResource("6_0np42")]
 position = Vector2(1153, 616)
@@ -247,6 +243,10 @@ position = Vector2(1799, 611)
 [node name="Ropero4" parent="." instance=ExtResource("18_if6dh")]
 position = Vector2(1825, 92)
 
-[connection signal="pressed" from="regresar" to="regresar" method="_on_pressed"]
+[node name="player" parent="." groups=["Personaje"] instance=ExtResource("3_7tnk0")]
+position = Vector2(232, 200)
+scale = Vector2(2, 2)
+
+[connection signal="pressed" from="Camera2D/regresar" to="Camera2D/regresar" method="_on_pressed"]
 [connection signal="recolectado" from="ObjetoOculto1" to="ObjetoOculto1" method="_on_recolectado"]
 [connection signal="recolectado" from="objRec" to="." method="_on_obj_rec_recolectado"]
